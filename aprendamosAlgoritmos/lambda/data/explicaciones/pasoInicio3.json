@@ -1,0 +1,50 @@
+{
+  "bodyTemplate7Data": {
+    "type": "object",
+    "objectId": "bt7Sample",
+    "title": "<tt> <tt> <tt> <tt> <tt> Aprendiendo Dijkstra",
+    "color": "#074f65",
+    "backgroundImage": {
+      "contentDescription": null,
+      "smallSourceUrl": null,
+      "largeSourceUrl": null,
+      "color": "#074f65",
+      "sources": [
+        {
+          "url": "https://i.ibb.co/drJ8RRS/fondo-TFGSin-Nombre.png",
+          "size": "small",
+          "widthPixels": 0,
+          "heightPixels": 0
+        },
+        {
+          "url": "https://i.ibb.co/drJ8RRS/fondo-TFGSin-Nombre.png",
+          "size": "large",
+          "widthPixels": 0,
+          "heightPixels": 0
+        }
+      ]
+    },
+    "image": {
+      "contentDescription": null,
+      "smallSourceUrl": null,
+      "largeSourceUrl": null,
+      "color": "#074f65",
+      "sources": [
+        {
+          "url": "https://i.ibb.co/5vVY7WX/grafo-Cuarto.png",
+          "size": "small",
+          "widthPixels": 0,
+          "heightPixels": 0
+        },
+        {
+          "url": "https://i.ibb.co/5vVY7WX/grafo-Cuarto.png",
+          "size": "large",
+          "widthPixels": 0,
+          "heightPixels": 0
+        }
+      ]
+    },
+    "logoUrl": "https://i.ibb.co/s6BVB8M/iconoAPP.png",
+    "hintText": "Try, \"Aprendiendo Dijkstra\""
+  }
+}

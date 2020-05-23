@@ -1,0 +1,197 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "aprendamos algoritmos",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "EnunciadoIntent",
+          "slots": [],
+          "samples": [
+            "quiero ver el enunciado",
+            "enunciado",
+            "ver el enunciado",
+            "Quiero saber el enunciado",
+            "Dame el enunciado"
+          ]
+        },
+        {
+          "name": "ContinuarIntent",
+          "slots": [],
+          "samples": [
+            "quiero más",
+            "siguiente explicación",
+            "siguiente",
+            "Continua"
+          ]
+        },
+        {
+          "name": "ExplicacionIntent",
+          "slots": [],
+          "samples": [
+            "comenzar explicacion",
+            "explicación",
+            "dame la explicación",
+            "quiero la explicación",
+            "oir explicación",
+            "comenzar explicación"
+          ]
+        },
+        {
+          "name": "ResolverIntent",
+          "slots": [],
+          "samples": [
+            "solucion",
+            "resuelvo",
+            "voy a resolver",
+            "resolver",
+            "se la respuesta",
+            "quiero resolver",
+            "resolver problema"
+          ]
+        },
+        {
+          "name": "pasoInicioDistanciasIntent",
+          "slots": [],
+          "samples": [
+            "la solución es cincuenta treinta cien diez",
+            "la respuesta es cincuenta treinta cien diez"
+          ]
+        },
+        {
+          "name": "pasoInicioCandidatosIntent",
+          "slots": [],
+          "samples": [
+            "la solución es dos tres cuatro cinco",
+            "la respuesta es dos tres cuatro cinco"
+          ]
+        },
+        {
+          "name": "pasoUnoNodoIntent",
+          "slots": [],
+          "samples": [
+            "la respuesta es cinco",
+            "la solución es cinco"
+          ]
+        },
+        {
+          "name": "pasoUnoCandidatosIntent",
+          "slots": [],
+          "samples": [
+            "la respuesta es dos tres cuatro",
+            "la solución es dos tres cuatro"
+          ]
+        },
+        {
+          "name": "pasoUnoDistanciasIntent",
+          "slots": [],
+          "samples": [
+            "la respuesta es cincuenta treinta veinte diez",
+            "la solución es cincuenta treinta veinte diez"
+          ]
+        },
+        {
+          "name": "pasoDosNodoIntent",
+          "slots": [],
+          "samples": [
+            "la solución es cuatro",
+            "la respuesta es cuatro"
+          ]
+        },
+        {
+          "name": "pasoDosCandidatosIntent",
+          "slots": [],
+          "samples": [
+            "la solución es dos tres",
+            "la respuesta es dos tres"
+          ]
+        },
+        {
+          "name": "pasoDosDistanciasIntent",
+          "slots": [],
+          "samples": [
+            "la solución es cuarenta treinta veinte diez",
+            "la respuesta es cuarenta treinta veinte diez"
+          ]
+        },
+        {
+          "name": "pasoTresNodoIntent",
+          "slots": [],
+          "samples": [
+            "la solución es tres",
+            "la respuesta es tres"
+          ]
+        },
+        {
+          "name": "pasoTresCandidatosIntent",
+          "slots": [],
+          "samples": [
+            "la solución es dos",
+            "la respuesta es dos"
+          ]
+        },
+        {
+          "name": "pasoTresDistanciasIntent",
+          "slots": [],
+          "samples": [
+            "la respuesta es treinta y cinco treinta veinte diez",
+            "la solución es treinta y cinco treinta veinte diez"
+          ]
+        },
+        {
+          "name": "silenciarIntent",
+          "slots": [],
+          "samples": [
+            "calla",
+            "para",
+            "silencio"
+          ]
+        },
+        {
+          "name": "volverIntent",
+          "slots": [],
+          "samples": [
+            "vuelve",
+            "quiero volver",
+            "volver"
+          ]
+        },
+        {
+          "name": "algoritmoIntent",
+          "slots": [],
+          "samples": [
+            "quiero ver el algoritmo",
+            "ver algoritmo",
+            "muestra el seudocódigo",
+            "Muestra el algoritmo"
+          ]
+        },
+        {
+          "name": "creditosIntent",
+          "slots": [],
+          "samples": [
+            "quiero ver los créditos",
+            "ver créditos",
+            "muestra los créditos"
+          ]
+        }
+      ],
+      "types": []
+    }
+  }
+}
