@@ -9,13 +9,11 @@ module.exports = {
 	handle(handlerInput) {
 		let filePath = 'launchRequest';
 
-		let speakOutput = utils.getSpeakOutput(handlerInput, filePath);
-
-		// const password = utils.getAttribute('password', handlerInput);
+		let speakOutput = 'Dime qué contraseña quieres para comunicarte con la app';
 
 		utils.showAPLWithScreen(handlerInput, filePath);
 		utils.sendMessageToWebSocket("enunciado", handlerInput);
-		utils.setScreenAttributeWithValue('', handlerInput);
+		utils.setScreenAttributeWithValue('startNewProgress', handlerInput);
 
 		return handlerInput.responseBuilder
 			.speak(speakOutput)

@@ -41,10 +41,13 @@ const pasoTresCandidatosFallo = require('./solucion/pasoTresCandidatosFallo');
 const pasoTresDistancias = require('./solucion/pasoTresDistancias');
 const pasoTresDistanciasFallo = require('./solucion/pasoTresDistanciasFallo');
 const enunciado = require('./explicaciones/enunciado');
-const password = require('./passwordHandler');
+const passwordHandlerWhenStart = require('./passwordHandlerWhenStart');
 const defaultAfterLaunch = require('./defaultAfterLaunch');
 const rememberProgress = require('./rememberProgress');
 const starNewProgress = require('./starNewProgress');
+const changePassword = require('./changePassword');
+const needPassword = require('./needPassword');
+
 
 module.exports = {
     LaunchRequestHandler,
@@ -90,8 +93,10 @@ module.exports = {
     pasoTresDistancias,
     pasoTresDistanciasFallo,
     enunciado,
-    password,
+    passwordHandlerWhenStart,
     defaultAfterLaunch,
     rememberProgress,
-    starNewProgress
+    starNewProgress,
+    changePassword,
+    needPassword
 };
