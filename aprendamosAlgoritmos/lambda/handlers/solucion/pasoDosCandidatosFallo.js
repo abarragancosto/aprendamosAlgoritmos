@@ -3,7 +3,7 @@ const utils = require('../../utils');
 module.exports = {
 	canHandle(handlerInput) {
 		return utils.requestTypeIs(handlerInput,'IntentRequest')
-			&& utils.attributeScreenIs(handlerInput, "pasoDosNodo");
+			&& utils.attributeIs('solucion',"pasoDosNodo", handlerInput);
 	},
 	handle(handlerInput) {
 

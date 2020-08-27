@@ -7,9 +7,9 @@ module.exports = {
 	canHandle(handlerInput) {
 		return (Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
 			&& Alexa.getIntentName(handlerInput.requestEnvelope) === 'ResolverIntent')
-			|| (handlerInput.requestEnvelope.request.type === 'IntentRequest'
-				&& utils.intentNameIs(handlerInput,'volverIntent')
-				&& utils.attributeScreenIs(handlerInput, screen));
+			|| (utils.requestTypeIs(handlerInput,'IntentRequest') &&
+				utils.intentNameIs(handlerInput,'volverSolucionIntent')
+				&& utils.attributeIs("solucion", screen, handlerInput ));
 	},
 	handle(handlerInput) {
 
@@ -19,9 +19,9 @@ module.exports = {
 
 		utils.showAPLWithScreen(handlerInput, filePath);
 
-		utils.setScreenAttributeWithValue(screen, handlerInput);
+		utils.setAttributeWithValue("solucion", screen, handlerInput);
 
-		utils.sendMessageToWebSocket("enunciado");
+		utils.sendMessageToWebSocket("enunciado", handlerInput);
 
 		return handlerInput.responseBuilder
 			.speak(speakOutput)

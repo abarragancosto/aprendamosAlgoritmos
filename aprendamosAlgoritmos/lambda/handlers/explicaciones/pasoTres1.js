@@ -7,12 +7,11 @@ module.exports = {
 		return (
 			utils.requestTypeIs(handlerInput, 'IntentRequest')
 			&& utils.intentNameIs(handlerInput, 'ContinuarIntent')
-			&& utils.attributeScreenIs(handlerInput, "pasoDos2")
-		) || (
-			utils.requestTypeIs(handlerInput, 'IntentRequest')
-			&& utils.intentNameIs(handlerInput, 'volverIntent')
-			&& utils.attributeScreenIs(handlerInput, screen)
-		);
+			&& utils.attributeIs('explicacion', 'pasoDos2', handlerInput)
+		)
+			|| (utils.requestTypeIs(handlerInput,'IntentRequest') &&
+				utils.intentNameIs(handlerInput,'volverEnunciadoIntent')
+				&& utils.attributeIs("explicacion", screen, handlerInput));
 	},
 	handle(handlerInput) {
 
@@ -21,9 +20,9 @@ module.exports = {
 
 		utils.showAPLWithScreen(handlerInput, filePath);
 
-		utils.setScreenAttributeWithValue(screen, handlerInput);
+		utils.setAttributeWithValue("explicacion", screen, handlerInput);
 
-		utils.sendMessageToWebSocket(screen);
+		utils.sendMessageToWebSocket(screen, handlerInput);
 
 		return handlerInput.responseBuilder
 			.speak(speakOutput)

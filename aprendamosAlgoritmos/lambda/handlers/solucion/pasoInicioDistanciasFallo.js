@@ -3,7 +3,7 @@ const utils = require('../../utils');
 module.exports = {
 	canHandle(handlerInput) {
 		return utils.requestTypeIs(handlerInput,'IntentRequest')
-			&& utils.attributeScreenIs(handlerInput,"pasoInicioCandidatos");
+			&& utils.attributeIs('solucion','pasoInicioCandidatos', handlerInput);
 	},
 	handle(handlerInput) {
 		let filePath = 'solucion/pasoInicioDistanciasFallo';

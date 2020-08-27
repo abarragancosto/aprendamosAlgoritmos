@@ -11,7 +11,7 @@ module.exports = {
 		let speakOutput = utils.getSpeakOutput(handlerInput, filePath);
 
 		utils.showAPLWithScreen(handlerInput, filePath);
-		utils.sendMessageToWebSocket("creditos");
+		utils.sendMessageToWebSocket("creditos", handlerInput);
 		return handlerInput.responseBuilder
 			.speak(speakOutput)
 			.reprompt(speakOutput)

@@ -1,11 +1,18 @@
 const Alexa = require('ask-sdk-core');
 const handlers = require('./handlers');
 
+const persistenceAdapter = require('./utils/persistenceAdapter')();
+const saveAttributes = require('./utils/saveAttributes');
+
 exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
+        handlers.rememberProgress,
+        handlers.starNewProgress,
+        handlers.defaultAfterLaunch,
         handlers.silenciarIntent,
         handlers.algoritmos,
         handlers.creditos,
+        handlers.password,
         handlers.pasoCuatro,
         handlers.pasoDos1,
         handlers.pasoDos2,
@@ -48,5 +55,10 @@ exports.handler = Alexa.SkillBuilders.custom()
     )
     .addErrorHandlers(
         handlers.ErrorHandler,
+    ).addResponseInterceptors(
+        saveAttributes
+    )
+    .withPersistenceAdapter(
+        persistenceAdapter
     )
     .lambda();

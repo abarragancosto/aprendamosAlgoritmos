@@ -6,10 +6,10 @@ module.exports = {
 	canHandle(handlerInput) {
 		return (utils.requestTypeIs(handlerInput,'IntentRequest')
 			&& utils.intentNameIs(handlerInput, 'ContinuarIntent')
-			&& utils.attributeScreenIs(handlerInput, "pasoCuatro"))
+			&& utils.attributeIs('explicacion', 'pasoCuatro', handlerInput))
 			|| (utils.requestTypeIs(handlerInput,'IntentRequest') &&
-				utils.intentNameIs(handlerInput,'volverIntent')
-				&& utils.attributeScreenIs(handlerInput, screen));
+				utils.intentNameIs(handlerInput,'volverEnunciadoIntent')
+				&& utils.attributeIs("explicacion", screen, handlerInput));
 	},
 	handle(handlerInput) {
 		const texts = require(`../../textos/explicaciones/${screen}`);
@@ -18,7 +18,7 @@ module.exports = {
 
 		utils.showAPLWithScreen(handlerInput, `explicaciones/${screen}`);
 
-		utils.setScreenAttributeWithValue(screen, handlerInput);
+		utils.setAttributeWithValue("explicacion", screen, handlerInput);
 
 		return handlerInput.responseBuilder
 			.speak(speakOutput)

@@ -6,10 +6,10 @@ module.exports = {
 	canHandle(handlerInput) {
 		return (utils.requestTypeIs(handlerInput,'IntentRequest')
 			&& utils.intentNameIs(handlerInput, 'pasoDosCandidatosIntent')
-			&& utils.attributeScreenIs(handlerInput, "pasoDosNodo"))
-			|| (utils.requestTypeIs(handlerInput,'IntentRequest')
-				&& utils.intentNameIs(handlerInput,'volverIntent')
-				&& utils.attributeScreenIs(handlerInput,screen));
+			&& utils.attributeIs('solucion', 'pasoDosNodo', handlerInput))
+			|| (utils.requestTypeIs(handlerInput,'IntentRequest') &&
+				utils.intentNameIs(handlerInput,'volverSolucionIntent')
+				&& utils.attributeIs('solucion', screen, handlerInput ));
 	},
 	handle(handlerInput) {
 
@@ -19,9 +19,9 @@ module.exports = {
 
 		utils.showAPLWithScreen(handlerInput, filePath);
 
-		utils.setScreenAttributeWithValue(screen, handlerInput);
+		utils.setAttributeWithValue("solucion", screen, handlerInput);
 
-		utils.sendMessageToWebSocket(screen);
+		utils.sendMessageToWebSocket(screen, handlerInput);
 
 		return handlerInput.responseBuilder
 			.speak(speakOutput)
