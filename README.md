@@ -7,8 +7,11 @@ En este repositorio está contenido el código de una skill de Alexa junto con u
 El objetivo principal de la skill es que el usuario aprenda a resolver un problema basado en el problema de los caminos mínimos. Para ello, la skill dispone de un problema a modo de ejemplo mediante el cual se le va explicando al usuario cómo debe resolver dicho ejemplo. Además, la skill dispone de un problema que el usuario debe resolver. Esta resolución se va realizando mediante preguntas y respuesta. Cuando el usuario falla en la respuesta a una pregunta, la skill le proporcionará información sobre cómo debe resolver la pregunta realizada anteriormente.
 
 ## Tecnologías usadas:
+
 Para la realización de la skill se ha utilizado NodeJS
+
 Para la realización de la aplicación Android se ha utilizado Kotlin
+
 Para la comunicación entre aplicaciones se ha utilizado un herramientas de AWS como son:
   * API Gateway para disponibilizar un WebSocket
   * Lambdas para ejecutar funciones para la conexión y desconexión con el WebSocket y para la comunicación entre las aplicaciones
